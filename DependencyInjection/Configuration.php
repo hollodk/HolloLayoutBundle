@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
           ->children()
-            ->scalarNode('title')->end()
+            ->scalarNode('title')->DefaultValue('Example Project')->end()
           ->end();
 
         return $treeBuilder;
