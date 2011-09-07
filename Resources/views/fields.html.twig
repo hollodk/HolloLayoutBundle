@@ -1,0 +1,35 @@
+{% block form_widget %}
+{% spaceless %}
+    <p>
+        {{ block('field_rows') }}
+        {{ form_rest(form) }}
+    </p>
+{% endspaceless %}
+{% endblock form_widget %}
+
+{% block field_row %}
+{% spaceless %}
+    <p>
+        {{ form_label(form, label|default(null)) }}<br />
+        {{ form_widget(form, {'attr':{'class':'input-text', 'size':40}}) }}
+        {{ form_errors(form) }}
+    </p>
+{% endspaceless %}
+{% endblock field_row %}
+
+{% block textarea_widget %}
+{% spaceless %}
+    <textarea class="input-text" cols="70" rows="7" {{ block('widget_attributes') }}>{{ value }}</textarea>
+{% endspaceless %}
+{% endblock textarea_widget %}
+
+{% block field_errors %}
+{% spaceless %}
+    {% if errors|length > 0 %}
+        {% for error in errors %}
+            <br /><span class="smaller err">Error: {{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</span>
+        {% endfor %}
+    {% endif %}
+{% endspaceless %}
+{% endblock field_errors %}
+
