@@ -4,6 +4,12 @@ HolloLayoutBundle
 :Date:      2011-09-07
 
 
+Introduction
+------------
+
+This bundle is pretty much to ease deployment of my new projects. This bundle just contain a bunch of different styles.
+
+
 Dependency
 ----------
 
@@ -13,5 +19,8 @@ This bundle depends on HolloMenuBundle, but you are free to hack the bundle to f
 TODO
 ----
 
-  - Add title to configuration
-
+  - Make sure left menu works
+  - Fix top right menu
+  - Create some dynamic handling of logout
+  - Cleanup in the icons folder
+  - Create a html login form
