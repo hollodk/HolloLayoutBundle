@@ -49,6 +49,12 @@
 
         <hr class="noscreen" />
 
+        <!-- Menu -->
+        <div id="menu" class="box">
+          {% render "HolloMenuBundle:Menu:topMenu" %}
+          {% render "HolloMenuBundle:Menu:topRightMenu" %}
+        </div> <!-- /header -->
+
         <hr class="noscreen" />
 
         <!-- Columns -->
@@ -63,6 +69,8 @@
                                 <p id="logo"><a href="#"><img src="{{ asset('bundles/hollolayout/images/logo.gif') }}" alt="Hollo" title="Hollo" /></a></p>
 
                         </div> <!-- /padding -->
+
+                        {% render "HolloMenuBundle:Menu:leftMenu" %}
 
                 </div> <!-- /aside -->
 
