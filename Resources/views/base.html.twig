@@ -29,7 +29,7 @@
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
       </head>
     <body>
-<div id="main">
+      <div id="main">
 
         <!-- Tray -->
         <div id="tray" class="box">
@@ -42,7 +42,7 @@
                           <a href="#" rel="2col" class="styleswitch ico-col2" title="Display two columns"><img src="{{ asset('bundles/hollolayout/images/switcher-2col.gif') }}" alt="2 Columns" /></a>
                         </span>
 
-                        {% trans with {'%name%':'Hollo'} %}Project: <strong>%name%</strong>{% endtrans %}
+                        Project: <strong>{% render "HolloLayoutBundle:Layout:renderTitle" %}</strong>
                 </p>
 
         </div> <!--  /tray -->
@@ -66,7 +66,7 @@
                         <div class="padding box">
 
                                 <!-- Logo (Max. width = 200px) -->
-                                <p id="logo"><a href="#"><img src="{{ asset('bundles/hollolayout/images/logo.gif') }}" alt="Hollo" title="Hollo" /></a></p>
+                                <p id="logo"><a href="#"><img src="{{ asset('bundles/hollolayout/images/logo.gif') }}" alt="Logo" title="Logo" /></a></p>
 
                         </div> <!-- /padding -->
 
@@ -79,7 +79,7 @@
                 <!-- Content (Right Column) -->
                 <div id="content" class="box">
 
-                        {% block header %}<h1>Hollo</h1>{% endblock %}
+                        {% block header %}<h1>{% render "HolloLayoutBundle:Layout:renderTitle" %}</h1>{% endblock %}
                         {% include 'HolloLayoutBundle::flash.html.twig' %}
 
                         {% block body %}{% endblock %}
@@ -90,7 +90,7 @@
 
         <!-- Footer -->
         <div id="footer" class="box">
-          <p class="f-left">&copy; 2011 <a href="#">Hollo</a>, All Rights Reserved &reg;</p>
+          <p class="f-left">&copy; 2011 <a href="#">{% render "HolloLayoutBundle:Layout:renderTitle" %}</a>, All Rights Reserved &reg;</p>
         </div> <!-- /footer -->
       </div> <!-- /main -->
       {% block javascripts %}{% endblock %}
