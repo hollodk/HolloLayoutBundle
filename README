@@ -4,6 +4,12 @@ HolloLayoutBundle
 :Date:      2011-09-07
 
 
+Dependency
+----------
+
+This bundle depends on HolloMenuBundle, but you are free to hack the bundle to fit your needs.
+
+
 TODO
 ----
 
