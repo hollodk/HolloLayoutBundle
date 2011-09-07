@@ -1,3 +1,0 @@
-HolloLayoutBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: HolloLayoutBundle:Default:index }
